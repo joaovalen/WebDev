@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function exercicio1(){
+
+        calcula_media();
+
+        function media(nota1,nota2,nota3) {
+            let media = nota1 + nota2 + nota3;
+            media = media / 3;
+            return media;
+        }
+
+        function calcula_media(){
+            let res = document.getElementById("resultado");
+
+            let nota1 = document.getElementById("ex1_txtNota1").value;
+            let nota2 = document.getElementById("ex1_txtNota2").value;
+            let nota3 = document.getElementById("ex1_txtNota3").value;
+
+            nota1 = parseFloat(nota1);
+            nota2 = parseFloat(nota2);
+            nota3 = parseFloat(nota3);
+
+            media_aluno = media (nota1,nota2,nota3);
+            resultado.innerHTML = "Resultado: " + media_aluno;
+            // window.alert("Nota do aluno:" + media_aluno);
+        }
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <h2>Exercício 1)</h2>
+    <h3>Exemplo de Cálculo de Média de Três Notas</h3> <br>
+    Nota 01: <input type="text" id="ex1_txtNota1"> <br><br>
+    Nota 02: <input type="text" id="ex1_txtNota2"> <br><br>
+    Nota 03: <input type="text" id="ex1_txtNota3"> <br><br>
+    
+    <input class="btn btn-primary" value="Calcular Média" onclick="exercicio1()" readonly> <br>
+
+    <div id="resultado">Resultado:</div>
+
+</body>
+</html>
+            
+            
+            
+         
+

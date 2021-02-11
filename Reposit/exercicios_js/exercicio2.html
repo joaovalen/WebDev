@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function exercicio2() {
+
+        calculo_media();
+
+        function calculo_media() {
+            // window.alert("FUNCIONO");
+            let res = document.getElementById("resultado");
+
+            let nota1 = document.getElementById("txtNota1").value;
+            let nota2 = document.getElementById("txtNota2").value;
+            let nota3 = document.getElementById("txtNota3").value;
+            let nota4 = document.getElementById("txtNota4").value;
+
+            nota1 = parseFloat(nota1);
+            nota2 = parseFloat(nota2);
+            nota3 = parseFloat(nota3);
+            nota4 = parseFloat(nota4);
+
+            let notas = new Array(nota1,nota2,nota3,nota4);
+        
+            let sum_notas = soma_maiores(notas)
+            resultado.innerHTML = "Resultado: " + sum_notas;
+        }
+
+        function soma_maiores(notas) {
+            notas.sort(function(a, b){return b - a});
+            let notas_somadas = notas[0] + notas[1] + notas[2];
+            return notas_somadas;
+        }
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Exercício 2)</h2>
+    <h3>Cálculo de Média Melhores Notas</h3>
+    Nota 01: <input type="text" id="txtNota1"> <br><br>
+    Nota 02: <input type="text" id="txtNota2"> <br><br>
+    Nota 03: <input type="text" id="txtNota3"> <br><br>
+    Nota 04: <input type="text" id="txtNota4"> <br><br>
+    <input class="btn btn-danger" value="Calcular Média" onclick="exercicio2()" readonly> 
+
+    <div id="resultado">Resultado:</div>
+
+</body>
+</html>
+
+

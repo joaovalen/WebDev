@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--  100, 50, 20, 10, 5, 2 e 1 -->
+    <script>
+        function calcularTroco(){
+            let res = document.getElementById("resultado");
+            let quantia = document.getElementById("quantia").value;
+            quantia = parseFloat(quantia);
+            let notas100 = 0;
+            let notas50 = 0;
+            let notas20 = 0;
+            let notas10 = 0;
+            let notas5 = 0;
+            let notas2 = 0;
+            let notas1 = 0;
+
+
+            while (quantia >= 100) {
+                quantia = quantia - 100;
+                notas100 = notas100 + 1
+            }
+            while (quantia >= 50) {
+                quantia = quantia - 50;
+                notas50 = notas50 + 1
+            }
+            while (quantia >= 20) {
+                quantia = quantia - 20;
+                notas20 = notas20 + 1
+            }
+            while (quantia >= 10) {
+                quantia = quantia - 10;
+                notas10 = notas10 + 1
+            }
+            while (quantia >= 5) {
+                quantia = quantia - 5;
+                notas5 = notas5 + 1
+            }
+            while (quantia >= 2) {
+                quantia = quantia - 2;
+                notas2 = notas2 + 1
+            }
+            while (quantia >= 1) {
+                quantia = quantia - 1;
+                notas1 = notas1 + 1
+            }
+
+            document.getElementById("n100").innerHTML = notas100;            
+            document.getElementById("n50").innerHTML = notas50;            
+            document.getElementById("n20").innerHTML = notas20;            
+            document.getElementById("n10").innerHTML = notas10;            
+            document.getElementById("n5").innerHTML = notas5;            
+            document.getElementById("n2").innerHTML = notas2;            
+            document.getElementById("n1").innerHTML = notas1;            
+        }
+    </script>
+
+    <style>
+        td, th{
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+
+
+
+<body>
+
+    <h2>Exercício 4)</h2>
+    <h3>Cálculo de Troco</h3>
+    Quantia : <input type="text" id="quantia"> <br><br>
+
+    <input value="Calcular troco" onclick="calcularTroco()" readonly>
+
+    <table>
+
+        <tr>
+            <td colspan="2"><b>Troco</b></td>
+        </tr>
+        <tr>
+            <td>Notas</td>
+            <td>Qtde</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td id="n100">0</td>
+        </tr>
+        <tr>
+            <td>50</td>
+            <td id="n50">0</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td id="n20">0</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td id="n10">0</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td id="n5">0</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td id="n2">0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td id="n1">0</td>
+        </tr>
+
+    </table>
+
+    
+</body>
+</html>

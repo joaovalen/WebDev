@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revisão 3</title>
+
+    <script>
+        // Não ta entregando direito o MMC
+
+        function revisão3() {
+
+            const n1 = parseFloat(document.getElementById("n1").value);
+            const n2 = parseFloat(document.getElementById("n2").value);
+
+            let min_div = mmc(n1,n2);
+            window.alert("MMC: " + min_div);
+        
+            function mmc(n1, n2) {
+                divisor = 1;
+                while(true){
+                    divisor = divisor + 1;
+                    if (n1 % divisor == 0 && n2 % divisor == 0 ){
+                        return (divisor);
+                    }
+                }
+            }
+
+        }
+        
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Revisão 3)</h2>
+    <h3>MMC</h3>
+    Número 01: <input type="text" id="n1"> <br><br>
+    Número 02: <input type="text" id="n2"> <br><br>
+    <input class="btn btn-danger" value="Calcular MMC" onclick="revisão3()" readonly> 
+
+    <div id="resultado">Resultado:</div>
+
+</body>
+</html>
+

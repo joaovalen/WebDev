@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/313d693f17.js" crossorigin="anonymous"></script>
+    
+    <title>Exercício1</title>
+
+    <script>
+
+        var count = 0;
+        function registrar(){
+            count++;
+            document.getElementById("prod" + count).innerHTML = eqp.value;
+            document.getElementById("poten" + count).innerHTML = poten.value;
+            document.getElementById("hrs" + count).innerHTML = hrs.value;
+            if (count == 5) {
+                calcular();
+            }
+        }
+    
+        function calcular(){
+            var custo = 0;
+            var soma = 0;
+            for(i = 1; i <= 5; i++){
+                custo = 0;
+                custo = parseInt(document.getElementById("poten" + i).innerHTML) * parseInt(document.getElementById("hrs" + i).innerHTML) / 1000;
+                soma += custo;
+            }
+            soma *= 30 * valorhr.value  ;
+            document.getElementById("vlrfinal").value = "R$ " + soma;
+        }
+    
+    </script>
+   
+</head>
+
+<body>
+
+    <div class="container">
+        <h3> Exercício 1) cálculo de consumo energético</h3>
+        Equipamento : <input type="text" id="eqp"> <br> <br>
+		Potência : <input type="text" id="poten"> <br> <br>
+		Horas : <input type="text" id="hrs"> <br> <br>
+        Valor/hora por Kilowatt : <input type="text" id="valorhr"><br><br>
+		<button class="btn btn-primary" onclick="registrar()">Registrar</button><br><br>
+        <p>Valor Mensal Final (calcula após inserir todos): </p><input type="text" id="vlrfinal" readonly="readonly"><br><br>
+
+    </div>
+    
+	<table class="table table-striped table-bordered" id='tabela'>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Produto</th>
+    <th scope="col">Potência</th>
+    <th scope="col">Horas Por dia</th>
+  </tr>
+  <tr>
+    <th scope="row">1</th>
+    <td id="prod1"></td>
+    <td id="poten1"></td>
+    <td id="hrs1"></td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td id="prod2"></td>
+    <td id="poten2"></td>
+    <td id="hrs2"></td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td id="prod3"></td>
+    <td id="poten3"></td>
+    <td id="hrs3"></td>
+  </tr>
+  <tr>
+    <th scope="row">4</th>
+    <td id="prod4"></td>
+    <td id="poten4"></td>
+    <td id="hrs4"></td>
+  </tr>
+  <tr>
+    <th scope="row">5</th>
+    <td id="prod5"></td>
+    <td id="poten5"></td>
+    <td id="hrs5"></td>
+  </tr>
+
+</table>
+   
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revisão 7</title>
+
+    <script>
+
+        function revisão7() {
+
+            let n = parseFloat(document.getElementById("n").value);
+    
+            let result = calcular(n);
+            window.alert("Resultado: " + result)
+        
+            function calcular(n) {
+                const numero = 1;
+                let soma = 0; 
+                for (i = 1; i < n; i ++){
+                    if (ehPrimo(i)){
+                        soma = soma + numero / i;
+                    }
+                   
+                } return soma;
+            }
+
+            function ehPrimo(num) {
+            for (j = 2; j < num; j++) {
+                if (num % j) {
+                    continue;
+                }
+                return false;
+            }
+            return true;
+            }
+
+        }
+        
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Revisão 7)</h2>
+    <h3>Calculador de soma de 1/números primos</h3>
+    Até que número você quer calcular? <br><input type="text" id="n"> <br><br>
+    <input class="btn btn-danger" value="Calcular" onclick="revisão7()" readonly> 
+
+    <div id="resultado">Resultado:</div>
+
+</body>
+</html>
+

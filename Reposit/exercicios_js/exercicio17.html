@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Exercício 02</title>
+
+    <script>
+        function exercicio2() {
+
+            var num = Math.round(parseFloat(document.getElementById('numero').value));
+            if (num < 9999) {
+                var resul = "";
+                un = num % 10;
+                dez = (num % 100 - num % 10) / 10;
+                cen = (num % 1000 - num % 100) / 100;
+                mil = (num - num % 1000) / 1000;
+
+                switch (mil) {
+                    case 0:
+                        break;
+                    case 1:
+                        resul += "mil";
+                        break;
+                    case 2:
+                        resul += "dois mil";
+                        break;
+                    case 3:
+                        resul += "três mil";
+                        break;
+                    case 4:
+                        resul += "quatro mil";
+                        break;
+                    case 5:
+                        resul += "cinco mil";
+                        break;
+                    case 6:
+                        resul += "seis mil";
+                        break;
+                    case 7:
+                        resul += "sete mil";
+                        break;
+                    case 8:
+                        resul += "oito mil";
+                        break;
+                    case 9:
+                        resul += "nove mil";
+                        break;
+                    default:
+                        break;
+                }
+                if (mil > 0 && ((cen == 0 && (dez != 0 || un != 0)) || (cen != 0 && dez == 0 && un == 0))) {
+                    resul += " e ";
+                } else if (mil != 0 && cen != 0) {
+                    resul += " ";
+                }
+
+                switch (cen) {
+                    case 0:
+                        break;
+                    case 1:
+                        if (dez != 0 || un != 0) {
+                            resul += "cento";
+                        } else {
+                            resul += "cem ";
+                        }
+                        break;
+                    case 2:
+                        resul += "duzentos";
+                        break;
+                    case 3:
+                        resul += "trezentos";
+                        break;
+                    case 4:
+                        resul += "quatrocentos";
+                        break;
+                    case 5:
+                        resul += "quinhentos";
+                        break;
+                    case 6:
+                        resul += "seiscentos";
+                        break;
+                    case 7:
+                        resul += "setecentos";
+                        break;
+                    case 8:
+                        resul += "oitocentos";
+                        break;
+                    case 9:
+                        resul += "novecentos";
+                        break;
+                    default:
+                        break;
+                }
+
+                if (cen != 0 && (dez != 0 || un != 0)) {
+                    resul += " e ";
+                }
+
+                switch (dez) {
+                    case 0:
+                        break;
+                    case 1:
+                        if (un == 0) {
+                            resul += "dez";
+                        }
+                        break;
+                    case 2:
+                        resul += "vinte";
+                        break;
+                    case 3:
+                        resul += "trinta";
+                        break;
+                    case 4:
+                        resul += "quarenta";
+                        break;
+                    case 5:
+                        resul += "cinquenta";
+                        break;
+                    case 6:
+                        resul += "sessenta";
+                        break;
+                    case 7:
+                        resul += "setenta";
+                        break;
+                    case 8:
+                        resul += "oitenta";
+                        break;
+                    case 9:
+                        resul += "noventa";
+                        break;
+                    default:
+                        break;
+                }
+                if (dez >= 2 && un != 0) {
+                    resul += " e ";
+                }
+                if (dez == 1) {
+                    switch (un) {
+                        case 0:
+                            break;
+                        case 1:
+                            resul += "onze";
+                            break;
+                        case 2:
+                            resul += "doze";
+                            break;
+                        case 3:
+                            resul += "treze";
+                            break;
+                        case 4:
+                            resul += "quatorze";
+                            break;
+                        case 5:
+                            resul += "quinze";
+                            break;
+                        case 6:
+                            resul += "dezesseis";
+                            break;
+                        case 7:
+                            resul += "dezessete";
+                            break;
+                        case 8:
+                            resul += "dezoito";
+                            break;
+                        case 9:
+                            resul += "dezenove";
+                            break;
+                        default:
+                            break;
+                    }
+                } else {
+                    switch (un) {
+                        case 0:
+                            break;
+                        case 1:
+                            resul += "um";
+                            break;
+                        case 2:
+                            resul += "dois";
+                            break;
+                        case 3:
+                            resul += "três";
+                            break;
+                        case 4:
+                            resul += "quatro";
+                            break;
+                        case 5:
+                            resul += "cinco";
+                            break;
+                        case 6:
+                            resul += "seis";
+                            break;
+                        case 7:
+                            resul += "sete";
+                            break;
+                        case 8:
+                            resul += "oito";
+                            break;
+                        case 9:
+                            resul += "nove";
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                if (mil == 0 && cen == 0 && dez == 0 && un == 0) {
+                    resul += "zero :3";
+                }
+                alert(resul);
+            } else {
+                alert("O número tem que ser menor que 9999!");
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    
+    <h2 class="m-2">Revisão Extra 2)</h2>
+    <h3 class="m-2">Escrever números por extenso</h3>
+    <h4 class="m-2 mt-4">Insira o Número a ser inscrito por extenso</h4>
+    <input class="m-2" type="number" name="numero" id="numero">
+    <br>
+    <input class="button btn btn-success m-2" type="button" value="Escrever por extenso" onclick="exercicio2();">
+
+</body>
+
+</html>

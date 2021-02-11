@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revisão 1</title>
+
+    <script>
+        function revisão1() {
+   
+            const n1 = parseFloat(document.getElementById("n1").value);
+            const n2 = parseFloat(document.getElementById("n2").value);
+
+            let max_div = mdc(n1,n2);
+            window.alert("MDC: " + max_div);
+
+            function mdc(n1, n2) {
+
+                if ((typeof n1 !== 'number') || (typeof n2 !== 'number')) 
+                    return false;
+                n1 = Math.abs(n1);
+                n2 = Math.abs(n2);
+                while(n2) {
+                    var t = n2;
+                    n2 = n1 % n2;
+                    n1 = t;
+                }
+                return n1;
+            }
+
+        }
+        
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Revisão 1)</h2>
+    <h3>MDC</h3>
+    Número 01: <input type="text" id="n1"> <br><br>
+    Número 02: <input type="text" id="n2"> <br><br>
+    <input class="btn btn-danger" value="Calcular MDC" onclick="revisão1()" readonly> 
+
+    <div id="resultado">Resultado:</div>
+
+</body>
+</html>
+
+

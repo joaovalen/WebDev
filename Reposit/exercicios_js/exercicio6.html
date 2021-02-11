@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function exercicio6(){
+
+            let recipientes = document.getElementById("recipiente").value;
+            let tampas = document.getElementById("tampa").value;
+
+            // Produção máxima = 96
+            let tempo_total = 480;
+            let produção_tampa = 1;
+            let produção_recipiente = 4;
+            let produção_total = 0;
+
+            recipientes = parseInt(recipientes);
+            tampas = parseInt(tampas);
+
+                if (recipientes == tampas){
+                    produção_total = recipientes + 96;
+                    window.alert("Produziu somente Kits novos, Total: " + produção_total);
+                }
+
+                if (recipientes > tampas){
+                    let diferença = recipientes - tampas;
+                    if (diferença > 480){
+                        produção_total = tampas + 480;
+                        window.alert("Não pode produzir tampas o suficiente para igualar, Produção Total: " + produção_total)
+                    } else {
+                        tempo_total = tempo_total - diferença;
+                        produção_total = tampas + diferença + tempo_total / 5;
+                        window.alert("Produziu " + diferença + " tampas para igualar e totalizou " + produção_total + " kits") 
+                    }
+                }
+
+                if (tampas > recipientes){
+                    let diferença = tampas - recipientes;
+                    if (diferença > 120){
+                        produção_total = recipientes + 120;
+                        window.alert("Não pode produzir recipientes o suficiente para igualar, Produção Total: " + produção_total)
+                    } else {
+                        tempo_total = tempo_total - diferença / 4;
+                        produção_total = recipientes + diferença + tempo_total / 5;
+                        window.alert("Produziu " + diferença + " recipientes para igualar e totalizou " + produção_total + " kits") 
+                    }
+                }           
+
+        }  
+
+    </script>
+
+</head>
+<body>
+
+    <h2>Exercício 6)</h2>
+    <h3>Cálculo Produção de Produtos</h3>
+    <h4>Não consegui fazer funcionar!!!</h4>
+
+    Tampas Estocadas: <input type="text" id="tampa"> <br><br>
+    Recipientes Estocados: <input type="text" id="recipiente"> <br><br>
+
+    <input value="Calcular Produção" onclick="exercicio6()" readonly>  
+
+    
+</body>
+</html>

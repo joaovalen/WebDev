@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function bhaskara() {
+            // window.alert("FUNCIONO");
+            
+            let valorA = document.getElementById("txt_valor_a").value;
+            let valorB = document.getElementById("txt_valor_b").value;
+            let valorC = document.getElementById("txt_valor_c").value;
+
+            valorA = parseFloat(valorA);
+            valorB = parseFloat(valorB);
+            valorC = parseFloat(valorC);
+
+            var coeficiente1;
+            var coeficiente2;
+
+            var delta = (valorB * valorB) - 4 * valorA * valorC;
+
+            document.write("Valor de Delta => " + delta + "<br/><br/>");
+
+            if(delta < 0){
+            document.write("Para Delta negativo, não existem raízes reais. <br/>");  
+            } else{
+            
+            document.write("Para Delta positivo, raízes diferentes: <br/>");  
+            
+            coeficiente1 = (-valorB + Math.sqrt(delta)) / (2 * valorA);
+            coeficiente2 = (-valorB - Math.sqrt(delta)) / (2 * valorA);
+            
+            document.write("x' = " + coeficiente1 + "<br/>");
+            document.write("x'' = " + coeficiente2 + "<br/>");
+            }
+
+        
+
+        // Não consegui fazer funcionar
+        function calcula(a,b,c) {
+            let res = document.getElementById("result_delta");
+            let del = document.getElementById("text_delta");
+            let coeficiente_1 = document.getElementById("coeficiente1");
+            let coeficiente_2 = document.getElementById("coeficiente2");
+            // window.alert(a,b,c);
+            let coef1;
+            let coef2;
+
+            let delta = (b * b) - 4 * a * c;
+            // window.alert(delta);
+
+            result_delta.innerHTML = "Valor de Delta => " + delta + "<br>";
+
+            if(delta < 0){
+            text_delta.innerHtml ="<br> Delta negativo, sem raízes reais. <br/>";  
+            } else{
+            
+            resultado.innerHTML("Para Delta positivo, raízes diferentes: <br/>");  
+            
+            coef1 = (-b + Math.sqrt(delta)) / (2 * a);
+            coef2 = (-b - Math.sqrt(delta)) / (2 * a);
+            
+            coeficiente1.innerHTML = "x' = " + coef1 + "<br/>";
+            coeficiente2.innerHTML = "x'' = " + coef2 + "<br/>";
+            }
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h2>Exercício 3)</h2>
+    <h3>Cálculo Bhaskara</h3>
+    Valor a: <input type="text" id="txt_valor_a"> <br><br>
+    Valor b: <input type="text" id="txt_valor_b"> <br><br>
+    Valor c: <input type="text" id="txt_valor_c"> <br><br>
+
+    <input value="Calcular Bhaskara" onclick="bhaskara()" readonly> 
+    
+</body>
+
+</html>
+
+

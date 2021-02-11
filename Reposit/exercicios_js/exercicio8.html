@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+
+    <script>
+        function exercicio8(){
+            const days = parseInt(document.getElementById("dias").value)
+            const year = parseInt(document.getElementById("ano").value)
+            
+            const date = new Date(1990,0,1)
+
+            if (days !== 0 && year !== 0) {
+                date.setDate(days)
+                date.setFullYear(year)
+
+                document.getElementById("resultado").innerHTML = date.toDateString()
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    
+    <h2>Exercício 8)</h2>
+    <h3>Cálculo Data Juliana</h3>
+  
+    <p>Insira os Dias: </p>
+    <input type="text" id="dias" value="0"> 
+
+    <p>Insira o Ano: </p>
+    <input type="text" id="ano" value="0"> 
+
+    <p>Resultado: </p>
+    
+    <p id="resultado"> </p>
+        
+    <input type="button" value="Calcular" onclick="exercicio8();">
+
+
+</body>
+</html>

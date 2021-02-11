@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function exercicio5(){
+            // window.alert("sDASFAS");
+            let res = document.getElementById("resultado");
+
+            let HE = document.getElementById("HE").value;
+            let HS = document.getElementById("HS").value;
+
+            HE = parseInt(HE);
+            HS = parseInt(HS);
+
+            // window.alert(HE);
+            // window.alert(HS);
+
+            let valor_total = calculaValor(HE,HS);
+
+            resultado.innerHTML = "Valor: " + valor_total;
+            
+            function calculaValor(HE,HS){
+                let HT = HS - HE;
+                let valor = 0;
+
+                switch(HT){
+                    case 1: valor = 5;
+                            break;
+                    case 2: valor = 10;
+                            break;
+                    case 3: valor = 12;
+                            break;
+                    case 4: valor = 14;
+                            break;
+                }
+                if (HT > 4){
+                    HT = HT - 4; 
+                    valor = 14;
+                    while (HT > 0){
+                        HT = HT - 1;
+                        valor = valor + 1;
+                    }
+                }
+
+                return valor;
+            }
+        }
+       
+
+       
+
+    </script>
+
+</head>
+<body>
+
+    <h2>Exercício 5)</h2>
+    <h3>Cálculo Valor Estacionamento</h3>
+    Hora de Entrada: <input type="text" id="HE"> <br><br>
+    Hora de Saída: <input type="text" id="HS"> <br><br>
+
+    <input class="btn btn-danger" value="Calcular Valor" onclick="exercicio5()" readonly>  
+
+    <div id="resultado">Valor:</div> 
+
+    
+</body>
+</html>

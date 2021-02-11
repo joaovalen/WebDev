@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/313d693f17.js" crossorigin="anonymous"></script>
+
+    <title>HTML</title>
+    <link rel="shortcut icon" href="assets/html_favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <!-- tudo fica colapsado até que o navegador fique grande -> "navbar-expand-lg" -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand"><i class="fas fa-code mr-2"></i>HTML</a>
+            <!-- Botão para quando colapsar -->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#expandme">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Ordenando que tudo fique colapsado -->
+            <div class="collapse navbar-collapse" id="expandme">
+                <div class="navbar-nav">
+                    <a href="pageCss.html" class="nav-item nav-link">CSS</a>
+                    <a href="pageJs.html" class="nav-item nav-link">Javascript</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BANNER -->
+    <section id="header" class="banner">
+        <video src="assets/video.mp4" type="video/mp4" autoplay muted loop> </video>
+        <div class="content">
+            <h1 class="display-3 text-white">HTML</h1>
+            <p class="lead text-white">Aprenda alguns dos conceitos básicos dessa linguagem</p>
+        </div>
+    </section>
+
+    <!-- CONTEÚDO -->
+    <section id="conteudo">
+        <div id="bloco" class="container p-4">
+            <h5 class="card-title titulo">Alguns Elementos Importantes</h5>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Formatação Automática VsCode</h5>
+                    <p class="card-text">No Vs Code você pode acessar a paleta de comandos 
+                        com ctrl + shift + p, e pesquisar pelo comando format document
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Texto (tags &ltP&gt, &ltBR&gt,.…)</h5>
+                    <p class="card-text"><strong>&ltp&gt</strong> se refere a parágrafos de texto, enquanto
+                        <strong>&ltbr&gt</strong> pode ser usado para quebrar as linhas:</p>
+                    <p><strong>&ltp&gt</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat omnis,
+                        unde corrupti libero <strong>&ltbr&gt</strong><br>dicta architecto praesentium possimus.
+                        Adipisci cumque corrupti iste officia, eum animi dolores blanditiis dolorum! Facilis, nostrum
+                        blanditiis?<strong>&lt/p&gt</strong></p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Anchor Tags - Links para outras páginas (tag &lta&gt,...)</h5>
+                    <p class="card-text">Com a tag de link, podemos levar o usuário a outras páginas na internet
+                        ou até mesmo para outras seções de nossa própria página:
+                    </p>
+                    <p class="bg-dark text-white p-1 d-inline-flex">&lta&gthref="https://google.com"
+                        target="_blank"&gtGoogle&lt/a&gt</p>
+                    <p><a href="https://google.com" target="_blank">Google</a></p>
+                    <p class="bg-dark text-white p-1 d-inline-flex">&lta&gthref="https://twitter.com"
+                        target="_blank"&gtGoogle&lt/a&gt</p>
+                    <p><a href="https://twitter.com" target="_blank">Twitter</a></p>
+                    <p class="text-secondary">É importante destacar a propriedade "target", que ao ser setada para
+                        "_blank" abre uma nova
+                        guia ao clicar.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Imagem (tag &ltfigure&gt, &ltimg&gt, &ltfigurecaption&gt)</h5>
+                    <p class="card-text">Podemos usar a tag <strong>&ltimg&gt</strong> para inserir imagens</p>
+                    <p class="card-text">Ao usar a característica alt="" estamos descrevendo para leitores de tela</p>
+                    <p class="bg-dark text-white p-1 d-inline-flex">&ltimg href="assets/cat.png" alt="a cat on the wind"&gt</p>
+
+                    <figure>
+                        <img class="img-thumbnail" src="assets/cat.jpg" alt="a cat on the wind" width="25%">
+                        <figcaption>gatinho na moto</figcaption>
+                    </figure>
+
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Lista (tags &ltul&gt,&ltli&gt,&ltol&gt,...)</h5>
+                    <p class="card-text">Podemos criar listas não ordenadas <strong>&ltul&gt</strong> e listas
+                        ordenadas <strong>&ltol&gt</strong>:
+                    </p>
+
+                    <p><Strong>Uma lista sem ordem</Strong></p>
+                    <ul>
+                        <li>Clonar cartão</li>
+                        <li>Desviar dinheiro</li>
+                        <li>Comprar pão</li>
+                    </ul>
+
+                    <p><Strong>Uma lista com ordem</Strong></p>
+                    <ol>
+                        <li>Ir correr</li>
+                        <li>Dar comida pro cachorro</li>
+                        <li>Tomar banho</li>
+                    </ol>
+
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Tabela (tags &ltthead&gt,&lttbody&gt,&lttfoot&gt,&lttr&gt,&lttd&gt,...)</h5>
+                    <p class="card-text">A seguir temos um exemplo de tabela formatada com css:</p>
+                    <table>
+                        <tr>
+                            <th>Company</th>
+                            <th>Contact</th>
+                            <th>Country</th>
+                        </tr>
+                        <tr>
+                            <td>Alfreds Futterkiste</td>
+                            <td>Maria Anders</td>
+                            <td>Germany</td>
+                        </tr>
+                        <tr>
+                            <td>Centro comercial Moctezuma</td>
+                            <td>Francisco Chang</td>
+                            <td>Mexico</td>
+                        </tr>
+                        <tr>
+                            <td>Ernst Handel</td>
+                            <td>Roland Mendel</td>
+                            <td>Austria</td>
+                        </tr>
+                        <tr>
+                            <td>Island Trading</td>
+                            <td>Helen Bennett</td>
+                            <td>UK</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">HTML Entities</h5>
+                    <p class="card-text">Sempre que precisar de um sinal diferentão usar as entities só pesquisar</p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Semantic Elements</h5>
+                    <p class="card-text">Ao invés de usar sempre Divs, varie com:<br>
+                    &ltsection&gt Seções mesmo, vc que sabe como usar, partes diferentes do conteúdo etc<br>
+                    &ltarticle&gt Digamos algo independente e reutilizável<br>
+                    &ltnav&gt Tudo que forneça links de navegação para outras páginas etc<br>
+                    &ltmain&gt Conteúdo principal, excluindo navbars, sidebars, etc<br> 
+                    &ltheader&gt é o header ne<br>
+                    &ltfooter&gt é o footer neam<br>
+                    &ltaside&gt Algo não essencial, sidebars e etc <br>
+                    &ltsummary&gt<br>
+                    &ltdetails&gt
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Emmet</a></h5>
+                    <p class="card-text">Ferramenta de Sintaxe já instalada no vsCode<br>
+                        <strong>Child: </strong> relação de hierarquia &gtdiv&gtnav&gtli <br>
+                        <strong>Siblings: </strong>com + podemos fazer eles um em baixo do outro h1+h2+h3 <br>
+                        <strong>Multiplication: </strong> Podemos fazer várias ocorrências de um mesmo ul&gt*5<br>
+                        Se precisar clica no link ai e aprende umas novas
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Span</h5>
+                    <p class="card-text">útil para estilizar algo dentro de um texto por exemplo,
+                        afinal é um elemento INLINE, parente da Div. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Inline Vs Block</h5>
+                    <p class="card-text">Alguns elementos
+                    </p>
+                    <img class="img-thumbnail" src="assets/inline.PNG">
+                    <h2>Inline</h2>
+                    <p class="card-text">
+                        &lta&gt
+                        &ltimg&gt
+                        &ltspan&gt
+                    </p>
+                    <h2>Block</h2>
+                    <p class="card-text">
+                        &ltp&gt
+                        &lth1-5&gt
+                        &ltdiv&gt
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Forms</h5>
+                    <p class="card-text">O elemento &ltform&gt por si só é só um container sem impacto visual.<br>
+                    Adicionamos dentro deles uma coleção de inputs, checkboxes e etc. <br>
+                    representa uma seção de um documento contendo controles interativos para enviar informação</p>
+                    
+                    <form action="">
+
+                    </form>
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
